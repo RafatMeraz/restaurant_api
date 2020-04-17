@@ -21,3 +21,9 @@ $router->get('/foods', ['middleware'=>'auth','uses'=>'FoodController@getAllFoods
 $router->get('/menuFoods', ['middleware'=>'auth','uses'=>'FoodController@getSelectedMenuFoods']);
 
 $router->get('/foodDetails', ['middleware'=>'auth','uses'=>'FoodController@getFoodItemDetails']);
+
+$router->post('/insertOrder', ['middleware'=>'auth','uses'=>'OrderController@insertOrder']);
+
+$router->post('/carts', ['middleware'=>'auth','uses'=>'CartController@addToCarts']);
+
+$router->delete('/carts', ['middleware'=>'auth','uses'=>'CartController@deleteToCarts']);
