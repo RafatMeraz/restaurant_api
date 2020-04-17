@@ -27,4 +27,12 @@ class FoodController extends Controller
         $result = MenuItemsModel::where('menu_id', $menu_id)->get();
         return response()->json($result);
     }
+
+    // get food item details
+    public function getFoodItemDetails(Request $request){
+        $food_id = $request->input('food_id');
+        // executing query into menu_items table using food_id for food details
+        $result = MenuItemsModel::where('id', $food_id)->get();
+        return response()->json($result);
+    }
 }
