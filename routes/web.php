@@ -27,3 +27,7 @@ $router->post('/insertOrder', ['middleware'=>'auth','uses'=>'OrderController@ins
 $router->post('/carts', ['middleware'=>'auth','uses'=>'CartController@addToCarts']);
 
 $router->delete('/carts', ['middleware'=>'auth','uses'=>'CartController@deleteToCarts']);
+
+$router->get('/tables', ['middleware'=>'auth','uses'=>'ReservationController@getAllDiningTable']);
+
+$router->post('/tables', ['middleware'=>'auth','uses'=>'ReservationController@reserveTable']);
