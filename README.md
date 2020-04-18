@@ -23,71 +23,86 @@ Documentation for the framework can be found on the [Lumen website](https://lume
      <tr>
         <td>/register</td>
         <td>post</td>
-        <td>String</td>
+        <td>Object</td>
         <td>email, password, address, phone</td>
    </tr>
      <tr>
         <td>/login</td>
         <td>post</td>
-        <td>String</td>
+        <td>Object</td>
         <td>email, password</td>
    </tr>
      <tr>
         <td>/updateNamePhone</td>
         <td>put</td>
-         <td>String</td>
-        <td>email, password</td>
+         <td>Object</td>
+        <td>email, user_name, phone, api_token</td>
    </tr>
      <tr>
         <td>/changePassword</td>
         <td>put</td>
-        <td>String</td>
-        <td>email, old_password, new_password</td>
+        <td>Object</td>
+        <td>email, old_password, new_password, api_token</td>
    </tr>
     <tr>
         <td>/menu</td>
         <td>get</td>
-        <td>String</td>
+        <td>Array</td>
+        <td>api_token</td>
    </tr> 
     <tr>
         <td>/foods</td>
         <td>get</td>
-        <td>String</td>
+        <td>Array</td>
+        <td>api_token</td>
    </tr>
    <tr>
         <td>/menuFoods</td>
         <td>get</td>
-        <td>String</td>
+        <td>Array</td>
+        <td>api_token, menu_id</td>
    </tr>
    <tr>
         <td>/foodDetails</td>
         <td>get</td>
-        <td>String</td>
+        <td>Object</td>
+        <td>api_token, food_id</td>
    </tr>
     <tr>
         <td>/insertOrder</td>
         <td>post</td>
-        <td>String</td>
+        <td>Object</td>
+        <td>api_token, customer_id, order_type_id, item_quantity, amount, item_id</td>
+   </tr>
+       <tr>
+        <td>/carts</td>
+        <td>get</td>
+        <td>Array</td>
+        <td>api_token, customer_id</td>
    </tr>
    <tr>
         <td>/carts</td>
         <td>post</td>
-        <td>String</td>
+        <td>Object</td>
+        <td>api_token, customer_id, food_id</td>
    </tr>
    <tr>
         <td>/carts</td>
         <td>delete</td>
-        <td>String</td>
+        <td>Object</td>
+        <td>api_token, cart_id</td>
    </tr>
     <tr>
         <td>/tables</td>
         <td>get</td>
-        <td>String</td>
+        <td>Array</td>
+        <td>api_token</td>
    </tr>
    <tr>
         <td>/tables</td>
         <td>post</td>
-        <td>String</td>
+        <td>Object</td>
+       <td>api_token, reservation_date, customer_id, reservation_time, dining_table_id</td>
    </tr>
  
 </table>
