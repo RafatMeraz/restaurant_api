@@ -24,6 +24,8 @@ $router->get('/foodDetails', ['middleware'=>'auth','uses'=>'FoodController@getFo
 
 $router->post('/insertOrder', ['middleware'=>'auth','uses'=>'OrderController@insertOrder']);
 
+$router->get('/carts', ['middleware'=>'auth','uses'=>'CartController@getAllCarts']);
+
 $router->post('/carts', ['middleware'=>'auth','uses'=>'CartController@addToCarts']);
 
 $router->delete('/carts', ['middleware'=>'auth','uses'=>'CartController@deleteToCarts']);

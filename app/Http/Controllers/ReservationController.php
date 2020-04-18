@@ -35,7 +35,7 @@ class ReservationController extends Controller
         $reservation_date = $request->input('reservation_date');
         $customer_id = $request->input('customer_id');
         $reservation_time = $request->input('reservation_time');
-        $dining_table_id = $request->input('dining table_id');
+        $dining_table_id = $request->input('dining_table_id');
         // insert new reservation into reservation table
         $result = ReservationModel::insert([
             'reservation_date'=> $reservation_date,

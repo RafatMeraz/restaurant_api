@@ -8,6 +8,13 @@ use App\CartModel;
 class CartController extends Controller
 {
 
+    // get all carts
+    public function getAllCarts(Request $request){
+        $customer_id = $request->input('customer_id');
+        $result = CartModel::where('customer_id', $customer_id);
+        return response()->json($result);
+    }
+
     // Add to carts
     public function addToCarts(Request $request){
         $customer_id = $request->input('customer_id');
